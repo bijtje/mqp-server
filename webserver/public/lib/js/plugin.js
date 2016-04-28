@@ -373,7 +373,7 @@ var NFP = {
 					NFP.main.options.AlertMessage("AFK message has been disabled!");
             	}else{
         			if(localStorage.getItem("NFP_AFKMessage") === "true" && localStorage.getItem("NFP_AFKMessage_CD") === "false" && $('#cm-'+ data.cid).hasClass('mention') === true){
-            			API.chat.send('[AFK] [@' + $('#cm-' + data.cid + ' .text .uname').text() + "] " + localStorage.getItem("NFP_AFKMessage_TXT"));
+            			API.chat.send('[AFK] [ @' + $('#cm-' + data.cid + ' .text .uname').text() + " ] " + localStorage.getItem("NFP_AFKMessage_TXT"));
             			NFP.main.options.AFKCooldown();
             		}
         		}
