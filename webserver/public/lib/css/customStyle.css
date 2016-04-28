@@ -1,0 +1,174 @@
+/* LOADING BAR CSS*/
+.load{
+    background: #1c1f25 !important;
+}
+.loader{
+    left: 25% !important;
+}
+.loading{
+    background: none !important;
+    left: 25% !important;
+}
+/* CHAT.CSS */
+.bdg-icon {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    line-height: 39px !important;
+}
+#chat .umsg{
+    white-space: pre-wrap;
+}
+#chat .umsg:before{
+    content: '\A';
+}
+.system .umsg {
+    font-style: italic;
+    white-space: normal !important;
+}
+
+.autocomplete{
+    opacity: 0.75 !important;
+}
+
+/* BACK.CSS */
+#room-bg{
+    background-image:url('https://i.gyazo.com/c3fb9d49464a322e54ae697e1e2a20f7.jpg') !important;
+}
+
+.tray {
+	border-bottom: 1px solid #444A59;
+}
+
+.new-pm-user .bdg-icon {
+	line-height: 27px !important;
+}
+
+.pm-user-info {
+	margin-top: 5px;
+}
+
+.pm-user-info .bdg-icon {
+	line-height: 23px !important;
+}
+
+.pm-user{
+	border-bottom: 1px solid #444A59;
+}
+
+/* */
+#messages > div.cm.log > div > span.umsg:before{
+    content: '';
+}
+#chat-back > div.autocomplete.ac-user > ul > li > div {
+    line-height: 15px !important;
+}
+
+
+/* VOTE BUTTONS */
+.btn-snooze{
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+.ctrl.btn-snooze:hover{
+    -webkit-box-shadow: inset 0 -5px 0 0 #925AFF !important;
+    -moz-box-shadow: inset 0 -5px 0 0 #925AFF !important;
+    -o-box-shadow: inset 0 -5px 0 0 #925AFF !important;
+    box-shadow: inset 0 -5px 0 0 #925AFF !important;
+}
+
+.btn-join{
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+.ctrl.btn-join:hover{
+    -webkit-box-shadow: inset 0 -5px 0 0 #F46B40 !important;
+    -moz-box-shadow: inset 0 -5px 0 0 #F46B40 !important;
+    -o-box-shadow: inset 0 -5px 0 0 #F46B40 !important;
+    box-shadow: inset 0 -5px 0 0 #F46B40 !important;
+}
+
+.btn-upvote{
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+.ctrl.btn-upvote:hover {
+    -webkit-box-shadow: inset 0 -5px 0 0 #A7CA00 !important;
+    -moz-box-shadow: inset 0 -5px 0 0 #A7CA00 !important;
+    -o-box-shadow: inset 0 -5px 0 0 #A7CA00 !important;
+    box-shadow: inset 0 -5px 0 0 #A7CA00 !important;
+}
+
+.btn-grab{
+    opacity: .75;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+.ctrl.btn-grab:hover {
+    -webkit-box-shadow: inset 0 -5px 0 0 #925AFF !important;
+    -moz-box-shadow: inset 0 -5px 0 0 #925AFF !important;
+    -o-box-shadow: inset 0 -5px 0 0 #925AFF !important;
+    box-shadow: inset 0 -5px 0 0 #925AFF !important;
+}
+
+.btn-downvote{
+    
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+.ctrl.btn-downvote:hover{
+    -webkit-box-shadow: inset 0 -5px 0 0 #C8303E !important;
+    -moz-box-shadow: inset 0 -5px 0 0 #C8303E !important;
+    -o-box-shadow: inset 0 -5px 0 0 #C8303E !important;
+    box-shadow: inset 0 -5px 0 0 #C8303E !important;
+}
+
+
+/* BORDER AROUND VID */
+.playback{
+    border-top: 1px solid #0a0a0a !important;
+    border-right:1px solid #0a0a0a !important;
+    border-left:1px solid #0a0a0a !important;
+    border-bottom: 0px !important;
+}
+
+.playback.fullscreen{
+    border: 0px !important;
+}
+
+
+/**/
+.controls{
+    border-top: 1px solid #0a0a0a !important;
+    background: black !important;
+}
+.dash{
+    background: black !important;
+}
+.logo-dash{
+    background: black !important; 
+}
+.btn-grab .playlists-grab{
+    border: 1px solid #0a0a0a;
+}
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    border-radius: 0px !important;
+    background: #43324e !important; 
+}
+::-webkit-scrollbar-track {
+    border-radius: 0px !important;
+    margin: 0 !important
+}
