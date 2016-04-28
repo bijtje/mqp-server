@@ -39,6 +39,10 @@
 	border-bottom: 1px solid #444A59;
 }
 
+.waitlist-user .bdg-icon {
+	line-height: 25px !important;
+}
+
 .new-pm-user .bdg-icon {
 	line-height: 27px !important;
 }
