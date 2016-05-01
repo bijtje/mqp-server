@@ -52,7 +52,8 @@
 		<div class="load">
 			<div class="loading">Turning up the music...</div>
 			<div class="loader"></div>
-			<img src="https://stgcdn.plug.dj/_/static/images/plugdj_logo_big.0a1cd1b76fb41d094d4cfa21a65ad6194f294d1a.png" style="position: absolute; left: 40%; float: left; top: 40%;" />
+			<!-- https://stgcdn.plug.dj/_/static/images/plugdj_logo_big.0a1cd1b76fb41d094d4cfa21a65ad6194f294d1a.png -->
+			<img src="#" style="position: absolute; left: 40%; float: left; top: 40%;" />
 		</div>
 		<div id="app">
 			<div id="room-bg"></div>
@@ -499,9 +500,9 @@
 								<div class="elap">{{makeTimeElapsed(h.start)}}</div>
 							</div>
 							<div class="voting">
-								<div class="dp downvote" data-ng-bind="h.votes.dislike || 0"></div>
-								<div class="dp grab" data-ng-bind="h.votes.grab || 0"></div>
 								<div class="dp upvote" data-ng-bind="h.votes.like || 0"></div>
+								<div class="dp grab" data-ng-bind="h.votes.grab || 0"></div>
+								<div class="dp downvote" data-ng-bind="h.votes.dislike || 0"></div>
 							</div>
 						</div>
 					</div>

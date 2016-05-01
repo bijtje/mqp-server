@@ -109,7 +109,7 @@
 }
 
 .btn-grab{
-    opacity: .75;
+    opacity: 1;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
