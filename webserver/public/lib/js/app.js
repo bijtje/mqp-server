@@ -4384,7 +4384,6 @@
 		},
 		fullscreen: function() {
 			$('.playback').toggleClass('fullscreen');
-			$('.video').toggleClass('fullscreen');
 			if (($('.btn-fullscreen > div').hasClass('mdi-fullscreen'))){
 				$('.btn-fullscreen > div').removeClass('mdi-fullscreen').addClass('mdi-fullscreen-exit');
 				//$(".playback").draggable({disabled:true}).resizable({disabled:true}).attr('style', '');
@@ -5726,6 +5725,13 @@
 		// Changing active playlist
 		.on('dblclick taphold', '.lib-fdr', function(){
 			var pid = $(this).attr('data-pid');
+
+			if (MP.user.playlists[pid]){
+				MP.playlistActivate(pid);
+			}
+		})
+		.on('click', '.btn-activate-playlist', function(){
+			var pid = $(this).parent().parent().data('pid')
 
 			if (MP.user.playlists[pid]){
 				MP.playlistActivate(pid);
