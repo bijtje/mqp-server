@@ -519,7 +519,7 @@
 					<div class="nav btn-youtube"><div class="mdi mdi-youtube-play"></div></div>
 					<div class="labels">
 						<p class="label now" ng-class="{'nobody yellow' : currentSong == 'Nobody is playing'}" title="{{currentSong}}" data-ng-bind="currentSong"></p>
-						<p class="label current-dj" title="Current DJ" data-ng-show="currentDJ"><span class="label">DJ: </span>{{currentDJ.un}}</p>
+						<p class="label current-dj" title="Current DJ" data-ng-show="currentDJ">{{currentDJ.un}} <span class="label">is playing</span></p>
 					</div>
 				</div>
 				<div class="right">
@@ -566,6 +566,7 @@
 						<div class="right rng-volume clickable"><span class="volume-val"></span><input type="range" min="0" max="100" value="0" class="volume"></div>
 					</div>
 					<div class="bottom">
+						<div class="song-progress song-progress-placeholder" style="width: 100%; background-color: #925AFF; opacity: 0.5;"></div>
 						<div class="song-progress" style="width: {{songProgress * 100}}%; background-color: {{vote}};"></div>
 					</div>
 					<div class="controls">

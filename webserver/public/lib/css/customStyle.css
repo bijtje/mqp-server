@@ -13,7 +13,6 @@
 .bdg-icon {
     margin-left: 2.5px;
     margin-right: 2.5px;
-    line-height: 39px !important;
 }
 #chat .umsg{
     white-space: pre-wrap;
@@ -24,6 +23,15 @@
 .system .umsg {
     font-style: italic;
     white-space: normal !important;
+}
+
+.room-greet {
+	border-top: 2px dashed #A77DC2;
+    border-bottom: 2px dashed #A77DC2;
+}
+
+.cm:nth-child(even):not(.mention):not(.broadcast), .cm:nth-child(even):not(.mention):not(.broadcast), .cm.log:nth-child(even) {
+	background: rgba(15, 18, 24, 0.65);
 }
 
 .autocomplete{
@@ -165,6 +173,80 @@
     border: 1px solid #0a0a0a;
 }
 
+.song-progress {
+	height: 4px !important;
+}
+
+.song-progress-placeholder {
+	width: 100%;
+	background-color: #925AFF;
+	opacity: 0.5;
+}
+
+/* Text Selections */
+/* => Room Description: */
+.logo-menu .description {
+	-webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* => Song Title: */
+.left .labels .now {
+	-webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* => Current DJ: */
+.left .labels .current-dj {
+	-webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* User Menu */
+.user-menu {
+	border: 1px solid #A77DC2 !important;
+}
+
+.user-menu .arrow {
+	background: #A77DC2 !important;
+}
+
+.user-menu .modal-controls {
+	border-top: 1px solid #A77DC2 !important;
+	background: #1C1C1F !important;
+}
+
+.user-menu-content {
+	background: #282C35 !important;
+}
+
+.user-menu .modal-ctrl {
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.user-menu .modal-ctrl:hover {
+    background: rgba(146, 90, 255, .25);
+    -webkit-box-shadow: inset 0 -3px 0 0 #925AFF !important;
+    -moz-box-shadow: inset 0 -3px 0 0 #925AFF !important;
+    -o-box-shadow: inset 0 -3px 0 0 #925AFF !important;
+    box-shadow: inset 0 -3px 0 0 #925AFF !important;
+}
+    
 
 
 /* Scrollbar */
