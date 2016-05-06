@@ -14,10 +14,10 @@
     margin-left: 2.5px;
     margin-right: 2.5px;
 }
-#chat .umsg{
+#chat .umsg, #pm-chat .umsg {
     white-space: pre-wrap;
 }
-#chat .umsg:before{
+#chat .umsg:before, #pm-chat .umsg:before {
     content: '\A';
 }
 .system .umsg {
@@ -40,6 +40,10 @@
 
 .btn-inner-pm {
 	background: rgba(28, 28, 31,0.0) none repeat scroll 0% 0% !important;
+}
+
+#chat, #pm-chat{
+	top: 41px !important;
 }
 
 /* BACK.CSS */

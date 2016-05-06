@@ -24,7 +24,6 @@ var defaultObj = function(){
 		temp_uptime: Date.now(),
 		lastdj: false,
 		salt: '',
-		xp: 0,
 	};
 };
 
@@ -371,16 +370,6 @@ Object.defineProperty( User.prototype, 'salt', {
 	set: function(val) {
 		this.data.salt = val;
 		this.updateUser();
-	}
-});
-
-Object.defineProperty( User.prototype, 'xp', {
-	get: function() {
-		return this.data.xp;
-	},
-	set: function(val) {
-		this.data.xp = val;
-		// We do NOT want to save this value
 	}
 });
 
