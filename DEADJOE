@@ -1,0 +1,16 @@
+
+*** These modified files were found in JOE when it aborted on Sun May  1 21:19:30 2016
+*** JOE was aborted by UNIX signal 1
+
+*** File '/root/mqp-server/.git/MERGE_MSG'
+Merge remote-tracking branch 'upstream/master'
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+
+*** File '(Unnamed)'
+/root/mqp-server/.git/MERGE_MSG
+/root/mqp-server/.git/MERGE_MSG

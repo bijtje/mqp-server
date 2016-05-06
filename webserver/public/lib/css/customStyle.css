@@ -38,6 +38,10 @@
     /*opacity: 0.75 !important;*/
 }
 
+.btn-inner-pm {
+	background: rgba(28, 28, 31,0.0) none repeat scroll 0% 0% !important;
+}
+
 /* BACK.CSS */
 #room-bg{
     background-image:url('https://i.gyazo.com/c3fb9d49464a322e54ae697e1e2a20f7.jpg') !important;
