@@ -280,6 +280,9 @@ var NFP = {
   				var popupValue = $("#NFP_Popup_Value").val();
                 var getName = name;
 				localStorage.setItem(getName, popupValue);
+				if(localStorage.getItem("NFP_CustomBG") === "true"){
+					$('#CustomBG').css("background-image"," url('" + popupValue  + "')");
+				}
 				$("#NFP_POPUP").remove();
   			},
 
