@@ -67,10 +67,11 @@ var NFP = {
 			}
 
 			//Desktop Notifications || Main
+			/*
 			if(localStorage.getItem("NFP_DesktopNotifications") === null){
 				localStorage.setItem("NFP_DesktopNotifications", "false");
 			}
-
+			*/
   		},
 
   		localStorageLoad : function(){
@@ -107,11 +108,13 @@ var NFP = {
 			}
 
 			//Desktop Notifications | Main
+			/*
 			if(localStorage.getItem("NFP_DesktopNotifications") === "true"){
 				NFP.main.toggles.toggleFunctionOn(".NFP_DesktopNotifications");
 			}else if(localStorage.getItem("NFP_DesktopNotifications") === "false"){
 				NFP.main.toggles.toggleFunctionOf(".NFP_DesktopNotifications");
 			}
+			*/
   		},
 
   		models : {
@@ -158,14 +161,14 @@ var NFP = {
 								'<i class="mdi mdi-arrange-bring-forward"></i>' +
 								'<span class="NFP_TabTitleText">DESKTOP NOTIFICATIONS</span></span>' +
 							'<span class="people-info ng-binding"></span>' +
-						'</div>' +
+						'</div>' + /*
 						'<div class="people-user ng-scope">' +
 							'<span class="NFP_TabUname nsg-binding NFP_DesktopNotifications" onclick="NFP.main.toggles.DesktopNotifications()">' + 
 								'<span class="isValid"><i></i></span>' +
 								'<span class="NFP_TabTitleText">Desktop Notifications</span></span>' +
 							'</span>' +
 							'<span class="people-info ng-binding"></span>' +
-						'</div>' +
+						'</div>' +*/
 
 						'<div class="people-user ng-scope" onclick="NFP.main.options.song2mp3()" style="border-top: 2px solid #302E31;">' +
 							'<span class="NFP_TabUname nsg-binding">' + 
@@ -237,7 +240,8 @@ var NFP = {
 					NFP.main.toggles.toggleFunctionOn(".NFP_AutoAFKMessage");
 				}
 			},
-
+	
+			/*
 			DesktopNotifications : function(){
 				if(localStorage.getItem("NFP_DesktopNotifications") === "true"){
 					localStorage.setItem("NFP_DesktopNotifications", "false");
@@ -247,6 +251,7 @@ var NFP = {
 					NFP.main.toggles.toggleFunctionOn(".NFP_DesktopNotifications");
 				}
 			},
+			*/
   		},
 
   		options : {
@@ -394,11 +399,14 @@ var NFP = {
   			},
 
   			catchChat : function(data){
+				/* Chat events */
+				/*
   				if($('#cm-'+ data.cid).hasClass('mention') === true){
   					if(localStorage.getItem("NFP_DesktopNotifications") === "true"){
   						NFP.main.options.DesktopNotify("ღ Nightcore Fantasia ✩ | Mention", data.message);
   					}
   				}
+				*/
   			},
 
   			song2mp3 : function() {

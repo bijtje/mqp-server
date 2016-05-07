@@ -38,6 +38,16 @@
     /*opacity: 0.75 !important;*/
 }
 
+.autocomplete > ul > li.active {
+    border-left: 2px solid #A77DC2;
+    background: rgba(167, 125, 194, 0.3);
+}
+
+.pm-user {
+	word-break: break-all !important; 
+	overflow: hidden !important;
+}
+
 .btn-inner-pm {
 	background: rgba(28, 28, 31,0.0) none repeat scroll 0% 0% !important;
 }
