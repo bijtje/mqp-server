@@ -4,14 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
 		<meta name="theme-color" content="1C1C1F">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.0.0/assets/css/emojione.min.css"/>
-		<link rel="shortcut icon" type="image/png" href="/pads/lib/img/icon.png" id="dynamic-favicon"/>
-		<!--<link rel="stylesheet" href="//cdn.materialdesignicons.com/1.5.54/css/materialdesignicons.min.css">-->
-		<link href="/pads/cdnassets/css/mdi.min.css" media="all" rel="stylesheet" type="text/css" />
-		<!--<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-		<link rel="stylesheet" type="text/css" href="/pads/cdnassets/css/tour.min.css">
-		<title>Nightcore Fantasia | Join Us!</title>
+		<title>musiqpad - join us!</title>
 		<link rel="shortcut icon" type="image/png" href="/pads/lib/img/icon.png" id="dynamic-favicon"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.0.0/assets/css/emojione.min.css"/>
 		<link href="https://cdn.musiqpad.com/css/mdi.min.css" media="all" rel="stylesheet" type="text/css" />
@@ -22,11 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="/pads/lib/css/chat.css">
 		<link rel="stylesheet" type="text/css" href="/pads/lib/css/icons.css">
 		<link rel="stylesheet" type="text/css" href="/pads/lib/css/menus.css">
-		<!--<link rel="stylesheet" type="text/css" href="https://cdn.musiqpad.com/css/emojify.css">-->
-		<!-- CUSTOM STYLE -->
-			<link rel="stylesheet" type="text/css" href="/pads/lib/css/customStyle.css">
-		<!-- END CUSTOM STYLE -->
-		<link rel="stylesheet" type="text/css" href="/pads/cdnassets/css/minicolors.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.musiqpad.com/css/minicolors.css">
 	</head>
 	<body data-ng-app="musiqpad" data-ng-controller="MainController">
@@ -58,8 +46,6 @@
 		<div class="load">
 			<div class="loading">Turning up the music...</div>
 			<div class="loader"></div>
-			<!-- https://stgcdn.plug.dj/_/static/images/plugdj_logo_big.0a1cd1b76fb41d094d4cfa21a65ad6194f294d1a.png -->
-			<img src="#" style="position: absolute; left: 40%; float: left; top: 40%;" />
 		</div>
 		<div id="app">
 			<div id="room-bg"></div>
@@ -517,9 +503,9 @@
 								<div class="elap">{{makeTimeElapsed(h.start)}}</div>
 							</div>
 							<div class="voting">
-								<div class="dp upvote" data-ng-bind="h.votes.like || 0"></div>
-								<div class="dp grab" data-ng-bind="h.votes.grab || 0"></div>
 								<div class="dp downvote" data-ng-bind="h.votes.dislike || 0"></div>
+								<div class="dp grab" data-ng-bind="h.votes.grab || 0"></div>
+								<div class="dp upvote" data-ng-bind="h.votes.like || 0"></div>
 							</div>
 						</div>
 					</div>
@@ -535,7 +521,7 @@
 					<div class="nav btn-youtube"><div class="mdi mdi-youtube-play"></div></div>
 					<div class="labels">
 						<p class="label now" ng-class="{'nobody yellow' : currentSong == 'Nobody is playing'}" title="{{currentSong}}" data-ng-bind="currentSong"></p>
-						<p class="label current-dj" title="Current DJ" data-ng-show="currentDJ">{{currentDJ.un}} <span class="label">is playing</span></p>
+						<p class="label current-dj" title="Current DJ" data-ng-show="currentDJ"><span class="label">DJ: </span>{{currentDJ.un}}</p>
 					</div>
 				</div>
 				<div class="right">
@@ -555,7 +541,8 @@
 					<div data-ng-click="changeTab('c', 2)" data-ng-class="{'active' : prop.c == 2}" class="tab btn-people" title="People">
 						<div class="mdi mdi-account-multiple"></div>
 						<span class="icon-info" data-ng-bind="roomSettings.separateUserCount ? numLogged : numLogged + numGuests"></span>
-						<span class="icon-info" data-ng-bind="numGuests" data-ng-show="roomSettings.separateUserCount" title="Guests" style="font-size: 8px; margin-left: -10px; vertical-align: top;"></span>
+						<span class="icon-info" data-ng-bind="numGuests" data-ng-show="roomSettings.separateUserCount"></span>
+						<div class="mdi mdi-account-multiple-outline" data-ng-show="roomSettings.separateUserCount"></div>
 					</div>
 					<div data-ng-click="changeTab('c', 3)" data-ng-class="{'active' : prop.c == 3, next: findPosInWaitlist() == '1'}" class="tab btn-waitlist" title="DJ Queue" >
 						<div class="mdi mdi-playlist-play"></div><span class="icon-info" data-ng-bind="queueLength"></span>
@@ -584,15 +571,10 @@
 						<div class="right rng-volume clickable"><span class="volume-val"></span><input type="range" min="0" max="100" value="0" class="volume"></div>
 					</div>
 					<div class="bottom">
-						<div class="song-progress song-progress-placeholder" style="width: 100%; background-color: #A77DC2; opacity: 0.4;"></div>
 						<div class="song-progress" style="width: {{songProgress * 100}}%; background-color: {{vote}};"></div>
 					</div>
-<<<<<<< HEAD
-					<div class="controls">
-=======
 					<div class="controls" data-ng-show="!roomSettings.altControls">
 						<div class="ctrl btn-downvote" title="Dislike"><div class="mdi mdi-thumb-down"></div><span class="info dislikes" data-ng-bind="queue.votes.dislike || 0"></span></div>
->>>>>>> upstream/master
 						<div class="ctrl btn-snooze" data-ng-class="{'active' : snooze}" title="Snooze"><div class="mdi mdi-block-helper"></div></div>
 						<!--<div class="ctrl btn-join" title="Join DJ Queue" ng-class="{hidden: findPosInWaitlist() != -1}"><div class="material-icons">play_circle_outline</div><span class="position">JOIN</span></div>
 						<div class="ctrl btn-join" title="Leave DJ Queue" ng-class="{hidden: findPosInWaitlist() == -1}"><div class="s">stop</div><span class="position" data-ng-bind="(findPosInWaitlist() > -1 ? '#' + findPosInWaitlist() : findPosInWaitlist())"></span></div>-->
@@ -600,7 +582,6 @@
 							<div class="mdi" data-ng-class="{'mdi-play-circle-outline': (isLoggedIn && findPosInWaitlist() == -1), 'mdi-stop':(isLoggedIn && findPosInWaitlist() != -1)}"></div>
 							<span class="info position" data-ng-bind="(isLoggedIn ? ((findPosInWaitlist() > -1 && findPosInWaitlist() != 0) ? '#' + findPosInWaitlist() : (findPosInWaitlist() == 0 ? 'DJ' : 'JOIN')) : 'SIGN UP TO DJ!')"></span>
 						</div>
-						<div class="ctrl btn-upvote" title="Like"><div class="mdi mdi-thumb-up"></div><span class="info likes" data-ng-bind="queue.votes.like || 0"></span></div>
 						<div class="ctrl btn-grab" title="Grab Song">
 							<div class="mdi mdi-plus-circle-outline"></div>
 							<span class="info grabs" data-ng-bind="queue.votes.grab || 0"></span>
@@ -611,7 +592,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="ctrl btn-downvote" title="Dislike"><div class="mdi mdi-thumb-down"></div><span class="info dislikes" data-ng-bind="queue.votes.dislike || 0"></span></div>
+						<div class="ctrl btn-upvote" title="Like"><div class="mdi mdi-thumb-up"></div><span class="info likes" data-ng-bind="queue.votes.like || 0"></span></div>
 					</div>
 					<div class="controls" data-ng-show="roomSettings.altControls">
 						<div class="ctrl btn-upvote" title="Like"><div class="mdi mdi-thumb-up"></div><span class="info likes" data-ng-bind="queue.votes.like || 0"></span></div>
@@ -751,13 +732,6 @@
 
 		<!--<script src="../lib/js/emojify.min.js"></script>-->
 		<!--<script>emojify.setConfig({img_dir:'https://raw.githubusercontent.com/Ranks/emojify.js/master/dist/images/basic'});</script>-->
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-		<script src="/pads/cdnassets/js/minicolors.js"></script>
-		<script src="/pads/cdnassets/js/angular-minicolors.js"></script>
-		<script src="/pads/cdnassets/js/jquery.caret.js"></script>
-		<script src="/pads/cdnassets/js/jquery.mobile.js"></script>
 		<script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/angularjs/1.5.5/angular.min.js"></script>
@@ -765,12 +739,11 @@
 		<script src="https://cdn.musiqpad.com/js/angular-minicolors.js"></script>
 		<script src="https://cdn.musiqpad.com/js/jquery.caret.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
-		<script src="/pads/cdnassets/js/tour.min.js"></script>
-		<script src="/pads/cdnassets/js/sha256.js"></script>
-		<script src="/pads/cdnassets/js/jquery.aautoscroll.2.4.js"></script>
+		<script src="https://cdn.musiqpad.com/js/tour.min.js"></script>
+		<script src="https://cdn.musiqpad.com/js/sha256.js"></script>
+		<script src="https://cdn.musiqpad.com/js/jquery.aautoscroll.2.4.js"></script>
 		<script src="https://www.youtube.com/iframe_api"></script>
 		<script src="config"></script>
 		<script src="/pads/lib/js/app.js"></script>
-		<script src="/pads/lib/js/plugin.js"></script>
 	</body>
 </html>
