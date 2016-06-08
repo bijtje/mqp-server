@@ -215,6 +215,11 @@
 						</label>
 						<span>Separate user and guest count</span>
 						<br>
+						<label class="set-check">
+							<input type="checkbox" ng-model="roomSettings.altControls" id="set-input-altcontrols" name="check" />
+						</label>
+						<span>Alternative controls</span>
+						<br>
 						<br>
 						<label class="set-check">
 							<input type="checkbox" ng-model="roomSettings.autoplayblocked" id="set-autplay-blocked" name="check" />
@@ -582,7 +587,12 @@
 						<div class="song-progress song-progress-placeholder" style="width: 100%; background-color: #A77DC2; opacity: 0.4;"></div>
 						<div class="song-progress" style="width: {{songProgress * 100}}%; background-color: {{vote}};"></div>
 					</div>
+<<<<<<< HEAD
 					<div class="controls">
+=======
+					<div class="controls" data-ng-show="!roomSettings.altControls">
+						<div class="ctrl btn-downvote" title="Dislike"><div class="mdi mdi-thumb-down"></div><span class="info dislikes" data-ng-bind="queue.votes.dislike || 0"></span></div>
+>>>>>>> upstream/master
 						<div class="ctrl btn-snooze" data-ng-class="{'active' : snooze}" title="Snooze"><div class="mdi mdi-block-helper"></div></div>
 						<!--<div class="ctrl btn-join" title="Join DJ Queue" ng-class="{hidden: findPosInWaitlist() != -1}"><div class="material-icons">play_circle_outline</div><span class="position">JOIN</span></div>
 						<div class="ctrl btn-join" title="Leave DJ Queue" ng-class="{hidden: findPosInWaitlist() == -1}"><div class="s">stop</div><span class="position" data-ng-bind="(findPosInWaitlist() > -1 ? '#' + findPosInWaitlist() : findPosInWaitlist())"></span></div>-->
@@ -602,6 +612,25 @@
 							</div>
 						</div>
 						<div class="ctrl btn-downvote" title="Dislike"><div class="mdi mdi-thumb-down"></div><span class="info dislikes" data-ng-bind="queue.votes.dislike || 0"></span></div>
+					</div>
+					<div class="controls" data-ng-show="roomSettings.altControls">
+						<div class="ctrl btn-upvote" title="Like"><div class="mdi mdi-thumb-up"></div><span class="info likes" data-ng-bind="queue.votes.like || 0"></span></div>
+						<div class="ctrl btn-downvote" title="Dislike"><div class="mdi mdi-thumb-down"></div><span class="info dislikes" data-ng-bind="queue.votes.dislike || 0"></span></div>
+						<div class="ctrl-alt btn-join" data-ng-class="{'active' : (isLoggedIn && findPosInWaitlist() == 0)}" title="{{(isLoggedIn ? (findPosInWaitlist() == -1 ? 'Join' : 'Leave') + ' DJ Queue' : 'SIGN UP TO DJ!')}}">
+							<div class="mdi" data-ng-class="{'mdi-play-circle-outline': (isLoggedIn && findPosInWaitlist() == -1), 'mdi-stop':(isLoggedIn && findPosInWaitlist() != -1)}"></div>
+							<span class="info position" data-ng-bind="(isLoggedIn ? ((findPosInWaitlist() > -1 && findPosInWaitlist() != 0) ? '#' + findPosInWaitlist() : (findPosInWaitlist() == 0 ? 'DJ' : 'JOIN')) : 'SIGN UP TO DJ!')"></span>
+						</div>
+						<div class="ctrl btn-grab" title="Grab Song">
+							<div class="mdi mdi-plus-circle-outline"></div>
+							<span class="info grabs" data-ng-bind="queue.votes.grab || 0"></span>
+							<div class="popup playlists-grab">
+								<div class="pl-grab-create">Create a playlist</div>
+								<div class="pl-grab" data-ng-repeat="x in playlists | orderByPlaylist:'name'" data-pid="{{x.id}}">
+									{{x.name}}
+								</div>
+							</div>
+						</div>
+						<div class="ctrl-alt btn-snooze" data-ng-class="{'active' : snooze}" title="Snooze"><div class="mdi mdi-block-helper"></div></div>
 					</div>
 				</div>
 			</div>
@@ -722,7 +751,6 @@
 
 		<!--<script src="../lib/js/emojify.min.js"></script>-->
 		<!--<script>emojify.setConfig({img_dir:'https://raw.githubusercontent.com/Ranks/emojify.js/master/dist/images/basic'});</script>-->
-<<<<<<< HEAD
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
@@ -730,14 +758,12 @@
 		<script src="/pads/cdnassets/js/angular-minicolors.js"></script>
 		<script src="/pads/cdnassets/js/jquery.caret.js"></script>
 		<script src="/pads/cdnassets/js/jquery.mobile.js"></script>
-=======
 		<script src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/angularjs/1.5.5/angular.min.js"></script>
 		<script src="https://cdn.musiqpad.com/js/minicolors.js"></script>
 		<script src="https://cdn.musiqpad.com/js/angular-minicolors.js"></script>
 		<script src="https://cdn.musiqpad.com/js/jquery.caret.js"></script>
->>>>>>> upstream/master
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script src="/pads/cdnassets/js/tour.min.js"></script>
 		<script src="/pads/cdnassets/js/sha256.js"></script>
